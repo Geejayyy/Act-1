@@ -10,32 +10,32 @@
 <h1>Register Account</h1>
 
 <section>
-First Name <input type="text" ng-model="fName">
+<input type="text" ng-model="fName" placeholder="First Name">
 <br>
 <br>
-Last Name  <input type="text" ng-model="lName">
+<input type="text" ng-model="lName" placeholder="Last Name">
 <br>
 <br>
-Gender     <input type="text" ng-model="gen">
+<input type="text" ng-model="gen" placeholder="Gender">
 <br>
 <br>
-Birth Date <input type="text" ng-model="date">
+<input type="text" ng-model="date" placeholder="Date Of Birth">
 <br>
 <br>
 <button ng-click="put()">Okay</button>
 <section>
 
 
-
-
-<div ng-repeat="data in dbdata">
-  {{ FirstName +" "+ LastName + " "+ Gender +" "+ DateOfBirth}}
-</div>
+	<li ng-init="callUser()">
+		<ul ng-repeat = "person in persons">
+			{{ person.FirstName  }}
+			{{ person.LastName }}
+			{{ person.Gender }}
+			{{ person.DateOfBirth }}
+		</ul>
+	</li>
 
 <footer>CKC 2016-2017</footer>
-
-
-
 <script type="text/javascript" src="js/angular.min.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
